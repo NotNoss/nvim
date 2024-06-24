@@ -26,4 +26,46 @@ return {
 		direction = "float",
 		float_opts = { border = "rounded" },
 	},
+	config = function()
+		local Terminal = require("toggleterm.terminal").Terminal
+		local lazygit = Terminal:new({
+			cmd = "lazygit",
+			hidden = true,
+			direction = "float",
+			float_opts = {
+				border = "rounded",
+			},
+		})
+
+		local serpl = Terminal:new({
+			cmd = "serpl",
+			hidden = true,
+			direction = "float",
+			float_opts = {
+				border = "rounded",
+			},
+		})
+
+		function _lazygit_toggle()
+			lazygit:toggle()
+		end
+
+		function _serpl_toggle()
+			serpl:toggle()
+		end
+
+		vim.api.nvim_set_keymap(
+			"n",
+			"<leader>lg",
+			"<cmd>lua _lazygit_toggle()<CR>",
+			{ noremap = true, silent = true, desc = "open lazygit" }
+		)
+
+		vim.api.nvim_set_keymap(
+			"n",
+			"<leader>sp",
+			"<cmd>lua _serpl_toggle()<CR>",
+			{ noremap = true, silent = true, desc = "open serpl" }
+		)
+	end,
 }
