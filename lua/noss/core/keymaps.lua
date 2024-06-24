@@ -20,8 +20,8 @@ map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "file save" })
 map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "file copy whole" })
-map("v", "<C-c>", "\"+y", { desc = "copy selection to clipboard" })
-map("n", "<C-v>", "\"+p", { desc = "paste from clipboard" })
+map("v", "<C-c>", '"+y', { desc = "copy selection to clipboard" })
+map("n", "<C-v>", '"+p', { desc = "paste from clipboard" })
 
 map("n", "<leader>sv", "<C-w>v", { desc = "split window vertically" })
 map("n", "<leader>sh", "<C-w>s", { desc = "split window horizontally" })
@@ -50,9 +50,12 @@ map("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "open lazy git" })
 map("n", "<leader>wK", "<cmd>WhichKey <CR>", { desc = "whichkey all maps" })
 
 map("n", "<leader>wk", function()
-  vim.cmd("WhichKey " .. vim.fn.input "WhichKey: ")
+	vim.cmd("WhichKey " .. vim.fn.input("WhichKey: "))
 end, { desc = "whichkey query lookup" })
 
 -- Indent
 map("v", "<", "<gv", { desc = "indent left" })
 map("v", ">", ">gv", { desc = "indent right" })
+
+-- Toggle Term
+map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "toggle floating terminal" })
