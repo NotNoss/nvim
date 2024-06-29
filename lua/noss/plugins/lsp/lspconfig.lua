@@ -165,6 +165,14 @@ return {
 					},
 				})
 			end,
+			["jsonls"] = function()
+				lspconfig["jsonls"].setup({
+					capabilities = capabilities,
+					cmd = { "vscode-json-language-server", "--stdio" },
+					filetypes = { "json", "jsonc" },
+					init_options = { provideFormatter = true },
+				})
+			end,
 		})
 	end,
 }

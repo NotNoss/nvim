@@ -13,6 +13,7 @@ return {
 				typescript = { "prettier" },
 				html = { "prettier" },
 				css = { "prettier" },
+				json = { "jq" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

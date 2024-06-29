@@ -35,6 +35,7 @@ return {
 				"css-languageserver",
 				"tailwindcss-language-server",
 				"clangd",
+				"jsonls",
 			},
 		})
 
@@ -44,6 +45,7 @@ return {
 				"shfmt",
 				"stylua",
 				"prettier",
+				"jq",
 			},
 		})
 	end,
