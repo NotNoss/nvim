@@ -59,3 +59,9 @@ map("v", ">", ">gv", { desc = "indent right" })
 
 -- Toggle Term
 map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "toggle floating terminal" })
+
+-- Kulala
+map("n", "<leader>ktv", "<cmd>lua require('kulala').toggle_view()<CR>", { desc = "kulala toggle view" })
+map("n", "<leader>kr", "<cmd>lua require('kulala').run()<CR>", { desc = "kulala run" })
+map("n", "<leader>kjn", "<cmd>lua require('kulala').jump_next()<CR>", { desc = "kulala jump next" })
+map("n", "<leader>kjn", "<cmd>lua require('kulala').jump_previous()<CR>", { desc = "kulala jump previous" })
