@@ -4,6 +4,7 @@ local opt = vim.opt
 
 -- General
 opt.number = true
+opt.relativenumber = true
 
 -- Clipboard
 opt.clipboard:append("unnamedplus")
@@ -14,7 +15,7 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
-opt.wrap = false
+opt.wrap = true
 
 -- search settings
 opt.ignorecase = true
