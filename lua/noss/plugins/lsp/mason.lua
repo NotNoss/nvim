@@ -9,7 +9,7 @@ return {
 		local mason = require("mason")
 
 		-- import mason-lspconfig
-		local mason_lspconfig = require("mason-lspconfig")
+    local mason_lspconfig = require("mason-lspconfig")
 
 		local mason_tool_installer = require("mason-tool-installer")
 
