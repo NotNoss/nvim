@@ -37,12 +37,6 @@ map("n", "<tab>", "<cmd>bnext<CR>", { desc = "buffer next" })
 map("n", "<S-tab>", "<cmd>bprev<CR>", { desc = "buffer previous" })
 map("n", "<S-q>", "<cmd>bdelete!<CR>", { desc = "close buffer" })
 
--- Nvim Tree
-map("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "toggle file explorer" })
-map("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "toggle file explorer on current file" })
-map("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "collapse file explorer" })
-map("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "refresh file explorer" })
-
 -- Lazygit
 map("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "open lazy git" })
 
