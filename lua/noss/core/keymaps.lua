@@ -47,6 +47,15 @@ map("n", "<leader>wk", function()
 	vim.cmd("WhichKey " .. vim.fn.input("WhichKey: "))
 end, { desc = "whichkey query lookup" })
 
+-- TFM
+map("n", "<leader>e", "<cmd>Tfm<CR>", { desc = "tfm open" })
+map("n", "<leader>mh", "<cmd>TfmSplit<CR>", { desc = "tfm horizontal split" })
+map("n", "<leader>mv", "<cmd>TfmVsplit<CR>", { desc = "tfm vertical split" })
+map("n", "<leader>mt", "<cmd>TfmTabedit<CR>", { desc = "tfm new tab" })
+
+-- Code Companion
+map("n", "<leader>cc", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "Code Companion Chat Toggle" })
+
 -- Indent
 map("v", "<", "<gv", { desc = "indent left" })
 map("v", ">", ">gv", { desc = "indent right" })
