@@ -55,6 +55,7 @@ map("n", "<leader>mt", "<cmd>TfmTabedit<CR>", { desc = "tfm new tab" })
 
 -- Code Companion
 map("n", "<leader>cc", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "Code Companion Chat Toggle" })
+map("n", "<leader>ca", "<cmd>CodeCompanionActions<CR>", { desc = "Code Companion Actions Open" })
 
 -- Indent
 map("v", "<", "<gv", { desc = "indent left" })
