@@ -1,8 +1,7 @@
 return {
 	"olimorris/codecompanion.nvim",
 	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"nvim-treesitter/nvim-treesitter",
+		"echasnovski/mini.nvim",
 	},
 
 	config = function()
@@ -29,7 +28,7 @@ return {
 					width = 95,
 					height = 10,
 					prompt = "Prompt ",
-					provider = "telescope",
+					provider = "mini_pick",
 					opts = {
 						show_default_actions = true,
 						show_default_prompt_library = true,

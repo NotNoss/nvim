@@ -3,7 +3,7 @@ return {
 	lazy = true,
 	ft = "markdown",
 	depenencies = {
-		"nvim-lua/plenary.nvim",
+		"echasnovski/mini.nvim",
 	},
 	opts = {
 		workspaces = {
