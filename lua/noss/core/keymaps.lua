@@ -69,3 +69,42 @@ map("n", "<leader>ktv", "<cmd>lua require('kulala').toggle_view()<CR>", { desc =
 map("n", "<leader>kr", "<cmd>lua require('kulala').run()<CR>", { desc = "kulala run" })
 map("n", "<leader>kjn", "<cmd>lua require('kulala').jump_next()<CR>", { desc = "kulala jump next" })
 map("n", "<leader>kjn", "<cmd>lua require('kulala').jump_previous()<CR>", { desc = "kulala jump previous" })
+
+-- Namu
+map("n", "<leader>nm", "<cmd>Namu symbols<CR>", { desc = "Open symbols picker" })
+
+-- Obsidian
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	callback = function()
+		map("n", "<leader>nn", "<cmd>ObsidianToday<CR>", { desc = "Open daily note for today", buffer = true })
+		map("n", "<leader>nnt", "<cmd>ObsidianTomorrow<CR>", { desc = "Open daily note for tomorrow", buffer = true })
+		map("n", "<leader>nny", "<cmd>ObsidianYesterday<CR>", { desc = "Open daily note for yesterday", buffer = true })
+		map(
+			"n",
+			"<leader>tc",
+			"<cmd>ObsidianToggleCheckbox<CR>",
+			{ desc = "Cycle through checkbox options", buffer = true }
+		)
+		map(
+			"n",
+			"<leader>bl",
+			"<cmd>ObsidianBacklinks<CR>",
+			{ desc = "Get a list of links to this file", buffer = true }
+		)
+		map("n", "<leader>fl", "<cmd>ObsidianFolllowLink<CR>", { desc = "Follow Obsidian Link", buffer = true })
+		map(
+			"n",
+			"<leader>flv",
+			"<cmd>ObsidianFolllowLink vsplit<CR>",
+			{ desc = "Follow Obsidian Link Vertical Split", buffer = true }
+		)
+		map(
+			"n",
+			"<leader>flh",
+			"<cmd>ObsidianFolllowLink hsplit<CR>",
+			{ desc = "Follow Obsidian Link Horizontal Split", buffer = true }
+		)
+		map("n", "<leader>toc", "<cmd>ObsidianTOC<CR>", { desc = "Obsidian Table of Contents", buffer = true })
+	end,
+})

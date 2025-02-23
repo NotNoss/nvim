@@ -8,10 +8,10 @@ return {
 		require("codecompanion").setup({
 			strategies = {
 				chat = {
-					adapter = "openai",
+					adapter = "anthropic",
 				},
 				inline = {
-					adapter = "openai",
+					adapter = "anthropic",
 				},
 			},
 			adapters = {
@@ -19,6 +19,21 @@ return {
 					return require("codecompanion.adapters").extend("openai", {
 						env = {
 							api_key = "cmd:pass show openai",
+						},
+						schema = {
+							model = {
+								default = "gpt-4o",
+							},
+						},
+					})
+				end,
+				anthropic = function()
+					return require("codecompanion.adapters").extend("anthropic", {
+						env = {
+							api_key = "cmd:pass show anthropic",
+						},
+						schema = {
+							default = "claude-3.5-sonnet",
 						},
 					})
 				end,
