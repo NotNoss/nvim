@@ -174,6 +174,16 @@ return {
 					init_options = { provideFormatter = true },
 				})
 			end,
+			["powershell_es"] = function()
+				lspconfig["powershell_es"].setup({
+					capabilities = capabilities,
+					bundle_path = "C:/w/PowerShellEditorServices",
+					shell = "powershell.exe",
+					filetypes = {
+						"ps1",
+					},
+				})
+			end,
 		})
 	end,
 }
