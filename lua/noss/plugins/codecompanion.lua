@@ -18,7 +18,7 @@ return {
 				openai = function()
 					return require("codecompanion.adapters").extend("openai", {
 						env = {
-							api_key = "cmd:pass show openai",
+							api_key = "cmd:pass show api_keys/openai",
 						},
 						schema = {
 							model = {
@@ -30,7 +30,7 @@ return {
 				anthropic = function()
 					return require("codecompanion.adapters").extend("anthropic", {
 						env = {
-							api_key = "cmd:pass show anthropic",
+							api_key = "cmd:pass show api_keys/anthropic",
 						},
 						schema = {
 							default = "claude-3.5-sonnet",

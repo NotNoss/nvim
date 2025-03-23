@@ -134,8 +134,8 @@ return {
 					},
 				})
 			end,
-			["tsserver"] = function()
-				lspconfig["tsserver"].setup({
+			["ts_ls"] = function()
+				lspconfig["ts_ls"].setup({
 					capabilities = capabilities,
 					cmd = { "typescript-language-server", "--stdio" },
 					filetypes = {

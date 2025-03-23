@@ -11,6 +11,11 @@ return {
 				name = "docs",
 				path = "~/Documents/Docs/",
 			},
+			{
+				name = "grimoire",
+				path = "~/Documents/Grimoire/",
+			},
+			disable_frontmatter = true,
 		},
 
 		mappings = {
